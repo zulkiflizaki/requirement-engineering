@@ -47,4 +47,4 @@ That's it! You should now see the simple e-commerce page with the "Add to Cart" 
 This project is mainly for learning, but if you have ideas for improvements, want to add more features (like a "Remove from Cart" button or more advanced non-functional examples), feel free to fork this repository and send in a pull request!
 
 ## 📄 License
-This project is open-source and available under the **[GNU License](https://eff.org)**. 
+This project is open-source and available under the **[GNU License](LICENSE)**. 
