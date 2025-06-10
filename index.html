@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Activity</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .product { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; }
+        #cart { border: 2px solid #007bff; padding: 15px; min-height: 100px; }
+        #cart-items li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Our Awesome Store</h1>
+
+    <div class="product">
+        <h2>Laptop</h2>
+        <p>Price: $1200</p>
+        <button data-product-id="laptop" data-product-name="Laptop" data-price="1200">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Mouse</h2>
+        <p>Price: $25</p>
+        <button data-product-id="mouse" data-product-name="Mouse" data-price="25">Add to Cart</button>
+    </div>
+
+    <h2>Shopping Cart</h2>
+    <div id="cart">
+        <h3>Items:</h3>
+        <ul id="cart-items">
+            </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+
+    <script>
+        // JavaScript code goes here
+        const cart = []; // This will store our cart items
+
+        // Helper function to update the cart display (students will likely need this)
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cart-items');
+            cartItemsList.innerHTML = ''; // Clear current display
+            let total = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`;
+                cartItemsList.appendChild(li);
+                total += item.price * item.quantity;
+            });
+
+            document.getElementById('cart-total').textContent = total.toFixed(2);
+        }
+
+        // --- Students will add their code below this line ---
+      
+    </script>
+</body>
+</html>
